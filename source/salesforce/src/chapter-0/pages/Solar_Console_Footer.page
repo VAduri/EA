@@ -1,0 +1,18 @@
+<apex:page >
+
+     <A HREF="#" onClick="testGetFocusedPrimaryTabObjectId();return false">
+         Click here to get the focused primary tab object ID</A> 
+
+     <apex:includeScript value="{!URLFOR($Resource.CONSOLE)}"/>
+    <script type="text/javascript">
+        function testGetFocusedPrimaryTabObjectId() {
+            sforce.console.getFocusedPrimaryTabObjectId(showObjectId);
+        }
+        var showObjectId = function showObjectId(result) {
+            //Display the object ID
+            alert('Object ID: ' + result.id);
+        };
+        
+  </script>
+
+</apex:page>

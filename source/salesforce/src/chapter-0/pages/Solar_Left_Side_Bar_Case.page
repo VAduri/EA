@@ -1,0 +1,317 @@
+<apex:page showHeader="false" standardStylesheets="false" sidebar="false" applyHtmlTag="false" applyBodyTag="false" docType="html-5.0">
+
+<html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <title>Salesforce Lightning Design System Trailhead Module</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <apex:stylesheet value="{!URLFOR($Resource.SLDS213, 'assets/styles/salesforce-lightning-design-system-vf.min.css')}" />
+</head>
+
+<apex:remoteObjects >
+  <apex:remoteObjectModel name="Case" fields="Id,LastModifiedDate"/>
+</apex:remoteObjects>
+
+<body>
+
+  <!-- REQUIRED SLDS WRAPPER -->
+  <div class="venkata-dev-force-trailhead">
+      
+    <!-- PAGE HEADER -->
+<div class="slds-page-header" role="banner">
+  <div class="slds-media">
+    <div class="slds-media__figure">
+      <svg aria-hidden="true" class="slds-icon slds-icon-standard-case">
+            <use xlink:href="{!URLFOR($Resource.SLDS213,
+      'assets/icons/standard-sprite/svg/symbols.svg#case')}"></use>
+      </svg>
+    </div>
+    <div class="slds-media__body">
+      <p class="slds-page-header__title slds-truncate" title="Rohde Corp - 80,000 Widgets">Rohde Corp - 80,000 Widgets</p>
+      <p class="slds-text-body--small">Mark Jaeckal • Unlimited Customer • 11/13/15</p>
+    </div>
+  </div>
+</div>
+    <!-- / PAGE HEADER -->
+
+    <!-- PRIMARY CONTENT WRAPPER -->
+    <div class="myapp">
+  <!-- CASE DETAILS -->
+  
+<table class="slds-table slds-table--bordered slds-table--cell-buffer">
+    <tr class="slds-text-title--caps">
+      <th scope="row">
+        <div class="slds-truncate" title="Reporting Date">Reporting Date</div>
+      </th>
+  <td data-label="Reporting Date">
+<div class="slds-form-element">
+  <label class="slds-form-element__label" for="text-input-01"></label>
+  <div class="slds-form-element__control">
+    <input id="text-input-01" class="slds-input" type="text" placeholder="" />
+  </div>
+</div>
+      </td>
+   </tr>
+
+<tr class="slds-text-title--caps">
+      <th scope="row">
+        <div class="slds-truncate" title="Commisioning Specialist">Commisioning Specialist</div>
+      </th>
+  <td data-label="Commisioning Specialist">
+<div class="slds-form-element">
+  <label class="slds-form-element__label" for="text-input-01"></label>
+  <div class="slds-form-element__control">
+    <input id="text-input-02" class="slds-input" type="text" placeholder="" />
+  </div>
+</div>
+      </td>
+ </tr>
+<tr class="slds-text-title--caps">
+      <th scope="row">
+        <div class="slds-truncate" title="Project">Project</div>
+      </th>
+ <td data-label="Project">
+        <div class="slds-form-element">
+  <label class="slds-form-element__label" for="text-input-01"></label>
+  <div class="slds-form-element__control">
+    <input id="text-input-03" class="slds-input" type="text" placeholder="" />
+  </div>
+</div>
+      </td>
+ </tr>
+<tr class="slds-text-title--caps">
+      <th scope="row">
+        <div class="slds-truncate" title="Project Name">Project Name</div>
+      </th>
+<td data-label="Project Name">
+        <div class="slds-form-element">
+  <label class="slds-form-element__label" for="text-input-01"></label>
+  <div class="slds-form-element__control">
+    <input id="text-input-04" class="slds-input" type="text" placeholder="" />
+  </div>
+</div>
+      </td>
+ </tr>
+<tr class="slds-text-title--caps">
+      <th scope="row">
+        <div class="slds-truncate" title="Total Cost">Total Cost</div>
+      </th>
+  <td data-label="Total Cost">
+       <div class="slds-form-element">
+  <label class="slds-form-element__label" for="text-input-01"></label>
+  <div class="slds-form-element__control">
+    <input id="text-input-05" class="slds-input" type="text" placeholder="" />
+  </div>
+</div>
+
+      </td>
+ </tr>
+<tr class="slds-text-title--caps">
+      <th scope="row">
+        <div class="slds-truncate" title="Status">Status</div>
+      </th>
+   <td data-label="Status">
+      <div class="slds-form-element">
+  <label class="slds-form-element__label" for="text-input-01"></label>
+  <div class="slds-form-element__control">
+    <input id="text-input-06" class="slds-input" type="text" placeholder="" />
+  </div>
+</div>
+
+      </td>
+ </tr>
+<tr class="slds-text-title--caps">
+      <th scope="row">
+        <div class="slds-truncate" title="Recurring?">Recurring?</div>
+      </th>
+ <td data-label="Recurring?">
+       <div class="slds-form-element">
+  <label class="slds-checkbox--toggle slds-grid">
+    <span class="slds-form-element__label slds-m-bottom--none"></span>
+    <input name="checkbox" type="checkbox" aria-describedby="toggle-desc" />
+    <span id="toggle-desc" class="slds-checkbox--faux_container" aria-live="assertive">
+      <span class="slds-checkbox--faux"></span>
+      <span class="slds-checkbox--on"></span>
+      <span class="slds-checkbox--off"></span>
+    </span>
+  </label>
+</div>
+      </td>
+ </tr>
+    <tr class="slds-text-title--caps">
+      <th scope="row">
+        <div class="slds-truncate" title="Corrective Action?">Corrective Action?</div>
+      </th>
+  <td data-label="Corrective Action?">
+               <div class="slds-form-element">
+  <label class="slds-checkbox--toggle slds-grid">
+    <span class="slds-form-element__label slds-m-bottom--none"></span>
+    <input name="checkbox" type="checkbox" aria-describedby="toggle-desc" />
+    <span id="toggle-desc" class="slds-checkbox--faux_container" aria-live="assertive">
+      <span class="slds-checkbox--faux"></span>
+      <span class="slds-checkbox--on"></span>
+      <span class="slds-checkbox--off"></span>
+    </span>
+  </label>
+</div>
+      </td>
+   </tr>
+
+<tr class="slds-text-title--caps">
+      <th scope="row">
+        <div class="slds-truncate" title="Category-1">Category-1</div>
+      </th>
+  <td data-label="Category-1">
+        <div class="slds-truncate" title="Cloudhub">Cloudhub</div>
+      </td>
+ </tr>
+<tr class="slds-text-title--caps">
+      <th scope="row">
+        <div class="slds-truncate" title="Category-2">Category-2</div>
+      </th>
+ <td data-label="Category-2">
+        <div class="slds-truncate" title="4/14/2015">4/14/2015</div>
+      </td>
+ </tr>
+<tr class="slds-text-title--caps">
+      <th scope="row">
+        <div class="slds-truncate" title="MPDC">MPDC</div>
+      </th>
+<td data-label="MPDC">
+        <div class="slds-truncate" title="Stage">Stage</div>
+      </td>
+ </tr>
+<tr class="slds-text-title--caps">
+      <th scope="row">
+        <div class="slds-truncate" title="Product Type">Product Type</div>
+      </th>
+  <td data-label="Product Type">
+        <div class="slds-truncate" title="20%">20%</div>
+      </td>
+ </tr>
+<tr class="slds-text-title--caps">
+      <th scope="row">
+        <div class="slds-truncate" title="Package Type">Package Type</div>
+      </th>
+   <td data-label="Package Type">
+        <div class="slds-truncate" title="$25k">$25k</div>
+      </td>
+ </tr>
+<tr class="slds-text-title--caps">
+      <th scope="row">
+        <div class="slds-truncate" title="Project Manager">Project Manager</div>
+      </th>
+ <td data-label="Project Manager">
+        <div class="slds-form-element">
+  <label class="slds-form-element__label" for="text-input-01"></label>
+  <div class="slds-form-element__control">
+    <input id="text-input-07" class="slds-input" type="text" placeholder="" />
+  </div>
+</div>
+
+      </td>
+ </tr>
+    <tr class="slds-text-title--caps">
+      <th scope="row">
+        <div class="slds-truncate" title="Project Engineer">Project Engineer</div>
+      </th>
+  <td data-label="Project Engineer">
+       <div class="slds-form-element">
+  <label class="slds-form-element__label" for="text-input-01"></label>
+  <div class="slds-form-element__control">
+    <input id="text-input-08" class="slds-input" type="text" placeholder="" />
+  </div>
+</div>
+
+      </td>
+   </tr>
+
+<tr class="slds-text-title--caps">
+      <th scope="row">
+        <div class="slds-truncate" title="District">District</div>
+      </th>
+  <td data-label="District">
+         <div class="slds-form-element">
+  <label class="slds-form-element__label" for="text-input-01"></label>
+  <div class="slds-form-element__control">
+    <input id="text-input-09" class="slds-input" type="text" placeholder="" />
+  </div>
+  </div>
+      </td>
+ </tr>
+<tr class="slds-text-title--caps">
+      <th scope="row">
+        <div class="slds-truncate" title="Driven OEM">Driven OEM</div>
+      </th>
+ <td data-label="Driven OEM">
+        <div class="slds-form-element">
+  <label class="slds-form-element__label" for="text-input-01"></label>
+  <div class="slds-form-element__control">
+    <input id="text-input-10" class="slds-input" type="text" placeholder="" />
+  </div>
+  </div>
+      </td>
+ </tr>
+<tr class="slds-text-title--caps">
+      <th scope="row">
+        <div class="slds-truncate" title="Site Location">Site Location</div>
+      </th>
+<td data-label="Site Location">
+        <div class="slds-form-element">
+  <label class="slds-form-element__label" for="text-input-01"></label>
+  <div class="slds-form-element__control">
+    <input id="text-input-11" class="slds-input" type="text" placeholder="" />
+  </div>
+  </div>
+      </td>
+ </tr>
+<tr class="slds-text-title--caps">
+      <th scope="row">
+        <div class="slds-truncate" title="Onshore">Onshore</div>
+      </th>
+  <td data-label="Onshore">
+           <span class="slds-checkbox">
+      <input type="checkbox" name="options" id="checkbox-310" checked="" />
+      <label class="slds-checkbox__label" for="checkbox-310">
+        <span class="slds-checkbox--faux"></span>
+        <span class="slds-form-element__label"></span>
+      </label>
+    </span>
+      </td>
+ </tr>
+<tr class="slds-text-title--caps">
+      <th scope="row">
+        <div class="slds-truncate" title="Offshore">Offshore</div>
+      </th>
+   <td data-label="Offshore">
+  
+    <span class="slds-checkbox">
+      <input type="checkbox" name="options" id="checkbox-309" checked="" />
+      <label class="slds-checkbox__label" for="checkbox-309">
+        <span class="slds-checkbox--faux"></span>
+        <span class="slds-form-element__label"></span>
+      </label>
+    </span>
+  
+      </td>
+ </tr>
+</table>
+  </div>
+    <!-- / PRIMARY CONTENT WRAPPER -->
+
+    <!-- FOOTER -->
+
+    <!-- / FOOTER -->
+
+  </div>
+  <!-- / REQUIRED SLDS WRAPPER -->
+
+  <!-- JAVASCRIPT -->
+  <script>
+
+</script>
+  <!-- / JAVASCRIPT -->
+</body>
+</html>
+</apex:page>

@@ -1,0 +1,157 @@
+<apex:page showHeader="false" standardStylesheets="false" sidebar="false" applyHtmlTag="false" applyBodyTag="false" docType="html-5.0">
+
+<html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <title>Salesforce Lightning Design System Trailhead Module</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <apex:stylesheet value="{!URLFOR($Resource.SLDS213, 'assets/styles/salesforce-lightning-design-system-vf.min.css')}" />
+</head>
+
+<apex:remoteObjects >
+  <apex:remoteObjectModel name="Case" fields="Id,LastModifiedDate"/>
+</apex:remoteObjects>
+
+<body>
+
+  <!-- REQUIRED SLDS WRAPPER -->
+  <div class="venkata-dev-force-trailhead">
+      
+    <!-- PAGE HEADER -->
+<div class="slds-page-header" role="banner">
+  <div class="slds-media">
+    <div class="slds-media__figure">
+      <svg aria-hidden="true" class="slds-icon slds-icon-standard-case">
+            <use xlink:href="{!URLFOR($Resource.SLDS213,
+      'assets/icons/standard-sprite/svg/symbols.svg#case')}"></use>
+      </svg>
+    </div>
+    <div class="slds-media__body">
+      <p class="slds-page-header__title slds-truncate" title="Rohde Corp - 80,000 Widgets">Rohde Corp - 80,000 Widgets</p>
+      <p class="slds-text-body--small">Mark Jaeckal • Unlimited Customer • 11/13/15</p>
+    </div>
+  </div>
+</div>
+    <!-- / PAGE HEADER -->
+
+    <!-- PRIMARY CONTENT WRAPPER -->
+    <div class="myapp">
+  <!-- CASE DETAILS -->
+  
+<div class="slds-panel slds-grid slds-grid--vertical slds-nowrap slds-is-editing">
+  <div class="slds-form--stacked slds-grow slds-scrollable--y">
+   <div class="slds-panel__section">
+      <h3 class="slds-text-heading--small slds-m-bottom--medium">Task Information</h3>
+      <div class="slds-form-element">
+        <label class="slds-form-element__label" for="text-input-01">Subject</label>
+        <div class="slds-form-element__control">
+          <input class="slds-input" id="text-input-01" value="Follow up on &#x27;15 Contract" />
+        </div>
+      </div>
+      <div class="slds-form-element">
+        <label class="slds-form-element__label" for="date-input-01">Due Date</label>
+        <div class="slds-form-element__control">
+          <input class="slds-input" id="date-input-01" value="6/18/16" />
+        </div>
+      </div>
+      <div class="slds-form-element slds-lookup slds-has-selection" data-select="single" data-scope="single" data-typeahead="false">
+        <label class="slds-form-element__label" for="text-input-02">Assigned To</label>
+        <div class="slds-form-element__control">
+          <div class="slds-pill_container slds-show">
+            <span class="slds-pill">
+              <span class="slds-icon_container slds-icon-standard-avatar slds-pill__icon_container">
+                <svg aria-hidden="true" class="slds-icon">
+                  <use xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#avatar"></use>
+                </svg>
+                <span class="slds-assistive-text">Person</span>
+              </span><a href="javascript:void(0);" class="slds-pill__label" title="Jason Dewar">Jason Dewar</a>
+              <button class="slds-button slds-button--icon slds-pill__remove">
+                <svg aria-hidden="true" class="slds-button__icon">
+                  <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close"></use>
+                </svg>
+                <span class="slds-assistive-text">Remove</span>
+              </button>
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="slds-form-element slds-lookup slds-has-selection" data-select="single" data-scope="single" data-typeahead="false">
+        <label class="slds-form-element__label" for="text-input-03">Name</label>
+        <div class="slds-form-element__control">
+          <div class="slds-pill_container slds-show">
+            <span class="slds-pill">
+              <span class="slds-icon_container slds-icon-standard-avatar slds-pill__icon_container">
+                <svg aria-hidden="true" class="slds-icon">
+                  <use xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#avatar"></use>
+                </svg>
+                <span class="slds-assistive-text">Person</span>
+              </span><a href="javascript:void(0);" class="slds-pill__label" title="Adam Choi">Adam Choi</a>
+              <button class="slds-button slds-button--icon slds-pill__remove">
+                <svg aria-hidden="true" class="slds-button__icon">
+                  <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close"></use>
+                </svg>
+                <span class="slds-assistive-text">Remove</span>
+              </button>
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="slds-form-element slds-lookup slds-has-selection" data-select="single" data-scope="single" data-typeahead="false">
+        <label class="slds-form-element__label" for="text-input-04">Related To</label>
+        <div class="slds-form-element__control">
+          <div class="slds-pill_container slds-show">
+            <span class="slds-pill">
+              <span class="slds-icon_container slds-icon-standard-account slds-pill__icon_container">
+                <svg aria-hidden="true" class="slds-icon">
+                  <use xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#account"></use>
+                </svg>
+                <span class="slds-assistive-text">Account</span>
+              </span><a href="javascript:void(0);" class="slds-pill__label" title="Tesla Cloudhub + Anypoint Connectors">Tesla Cloudhub + Anypoint Connectors</a>
+              <button class="slds-button slds-button--icon slds-pill__remove">
+                <svg aria-hidden="true" class="slds-button__icon">
+                  <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close"></use>
+                </svg>
+                <span class="slds-assistive-text">Remove</span>
+              </button>
+            </span>
+          </div>
+        </div>
+      </div>
+    
+    </div>
+      <div class="slds-form-element">
+        <label class="slds-form-element__label" for="non-text-input-02">Priority</label>
+        <div class="slds-form-element__control">
+          <div class="slds-select_container">
+            <select class="slds-select" id="non-text-input-02">
+              <option>Normal</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="slds-panel__actions slds-has-divider--top">
+    <div class="slds-grid slds-grid--align-center">
+      <button type="button" class="slds-button slds-button--neutral">Cancel</button>
+      <button type="button" class="slds-button slds-button--brand">Save</button>
+    </div>
+  </div>
+</div>
+  </div>
+    <!-- / PRIMARY CONTENT WRAPPER -->
+
+    <!-- FOOTER -->
+
+    <!-- / FOOTER -->
+  <!-- / REQUIRED SLDS WRAPPER -->
+
+  <!-- JAVASCRIPT -->
+  <script>
+
+</script>
+  <!-- / JAVASCRIPT -->
+</body>
+</html>
+</apex:page>

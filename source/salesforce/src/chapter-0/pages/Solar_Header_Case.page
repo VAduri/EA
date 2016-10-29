@@ -1,0 +1,124 @@
+<apex:page showHeader="false" standardStylesheets="false" sidebar="false" applyHtmlTag="false" applyBodyTag="false" docType="html-5.0">
+
+<html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <title>Salesforce Lightning Design System Trailhead Module</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <apex:stylesheet value="{!URLFOR($Resource.SLDS213, 'assets/styles/salesforce-lightning-design-system-vf.min.css')}" />
+</head>
+
+<apex:remoteObjects >
+  <apex:remoteObjectModel name="Case" fields="Id,LastModifiedDate"/>
+</apex:remoteObjects>
+
+<body>
+
+  <!-- REQUIRED SLDS WRAPPER -->
+  <div class="venkata-dev-force-trailhead">
+      
+    <!-- PAGE HEADER -->
+    
+    <div class="slds-page-header" role="banner">
+  <div class="slds-grid">
+    <div class="slds-col slds-has-flexi-truncate">
+      <div class="slds-media slds-no-space slds-grow">
+        <div class="slds-media__figure">
+          <svg aria-hidden="true" class="slds-icon slds-icon-standard-user">
+            <use xlink:href="{!URLFOR($Resource.SLDS213,
+      'assets/icons/standard-sprite/svg/symbols.svg#case')}"></use>
+          </svg>
+        </div>
+        <div class="slds-media__body">
+      <p class="slds-page-header__title slds-truncate" title="Rohde Corp - 80,000 Widgets">Rohde Corp - 80,000 Widgets</p>
+      <p class="slds-text-body--small">Mark Jaeckal • Unlimited Customer • 11/13/15 • Mark Jaeckal • Unlimited Customer • 11/13/15</p>
+    </div>
+      </div>
+    </div>
+    <div class="slds-col slds-no-flex slds-grid slds-align-top">
+      
+      <div class="slds-button-group" role="group">
+        <button class="slds-button slds-button--neutral">Edit</button>
+        <button class="slds-button slds-button--neutral">Delete</button>
+        <button class="slds-button slds-button--neutral">Clone</button>
+      </div>
+    </div>
+  </div>
+  <ul class="slds-grid slds-page-header__detail-row">
+    <li class="slds-page-header__detail-block">
+      <p class="slds-text-title slds-truncate slds-m-bottom--xx-small" title="Field 1">Field 1</p>
+      <p class="slds-text-body--regular slds-truncate" title="Description that demonstrates truncation with a long text field">Description that demonstrates truncation with a long text field.</p>
+    </li>
+    <li class="slds-page-header__detail-block">
+      <p class="slds-text-title slds-truncate slds-m-bottom--xx-small" title="Field2 (3)">Field 2 (3)
+        <button class="slds-button slds-button--icon" aria-haspopup="true">
+          <svg aria-hidden="true" class="slds-button__icon slds-button__icon--small">
+            <use xlink:href="{!URLFOR($Resource.SLDS213,
+      'assets/icons/standard-sprite/svg/symbols.svg#case')}"></use>
+          </svg>
+          <span class="slds-assistive-text">More Actions</span>
+        </button>
+      </p>
+      <p class="slds-text-body--regular">Multiple Values</p>
+    </li>
+    <li class="slds-page-header__detail-block">
+      <p class="slds-text-title slds-truncate slds-m-bottom--xx-small" title="Field 3">Field 3</p><a href="javascript:void(0);">Hyperlink</a></li>
+    <li class="slds-page-header__detail-block">
+      <p class="slds-text-title slds-truncate slds-m-bottom--xx-small" title="Field 4">Field 4</p>
+      <p>
+        <span title="Description (2-line truncation—must use JS to truncate).">Description (2-line truncat...</span>
+      </p>
+    </li>
+    <li class="slds-page-header__detail-block">
+      <p class="slds-text-title slds-truncate slds-m-bottom--xx-small" title="Field 4">Field 4</p>
+      <p>
+        <span title="Description (2-line truncation—must use JS to truncate).">Description (2-line truncat...</span>
+      </p>
+    </li>
+    <li class="slds-page-header__detail-block">
+      <p class="slds-text-title slds-truncate slds-m-bottom--xx-small" title="Field 4">Field 4</p>
+      <p>
+        <span title="Description (2-line truncation—must use JS to truncate).">Description (2-line truncat...</span>
+      </p>
+    </li>
+    <li class="slds-page-header__detail-block">
+      <p class="slds-text-title slds-truncate slds-m-bottom--xx-small" title="Field 4">Field 4</p>
+      <p>
+        <span title="Description (2-line truncation—must use JS to truncate).">Description (2-line truncat...</span>
+      </p>
+    </li>
+    <li class="slds-page-header__detail-block">
+      <p class="slds-text-title slds-truncate slds-m-bottom--xx-small" title="Field 4">Field 4</p>
+      <p>
+        <span title="Description (2-line truncation—must use JS to truncate).">Description (2-line truncat...</span>
+      </p>
+    </li>
+  </ul>
+</div>
+    
+
+    <!-- / PAGE HEADER -->
+
+    <!-- PRIMARY CONTENT WRAPPER -->
+    <div class="myapp">
+  <!-- CASE DETAILS -->
+
+  </div>
+    <!-- / PRIMARY CONTENT WRAPPER -->
+
+    <!-- FOOTER -->
+
+    <!-- / FOOTER -->
+
+  </div>
+  <!-- / REQUIRED SLDS WRAPPER -->
+
+  <!-- JAVASCRIPT -->
+  <script>
+
+</script>
+  <!-- / JAVASCRIPT -->
+</body>
+</html>
+</apex:page>

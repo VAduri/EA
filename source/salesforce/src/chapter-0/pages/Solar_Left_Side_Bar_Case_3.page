@@ -1,0 +1,76 @@
+<apex:page showHeader="false" standardStylesheets="false" sidebar="false" applyHtmlTag="false" applyBodyTag="false" docType="html-5.0">
+
+<html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <title>Salesforce Lightning Design System Trailhead Module</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <apex:stylesheet value="{!URLFOR($Resource.SLDS213, 'assets/styles/salesforce-lightning-design-system-vf.min.css')}" />
+  <apex:includeScript value="{!URLFOR($Resource.JQUERY)}" />
+</head>
+
+<apex:remoteObjects >
+  <apex:remoteObjectModel name="Case" fields="Id,LastModifiedDate"/>
+</apex:remoteObjects>
+
+<body>
+
+  <!-- REQUIRED SLDS WRAPPER -->
+  <div class="venkata-dev-force-trailhead">
+      
+    <!-- PAGE HEADER -->
+<div class="slds-tabs--scoped">
+  <ul class="slds-tabs--scoped__nav" role="tablist">
+    <li class="slds-tabs--scoped__item slds-text-title--caps slds-active" title="Item One" role="presentation"><a class="slds-tabs--scoped__link" href="javascript:void(0);" role="tab" tabindex="0" aria-selected="true" aria-controls="tab-scoped-1" id="tab-scoped-1__item" onclick="selectTab(this);">Item One</a></li>
+    <li class="slds-tabs--scoped__item slds-text-title--caps" title="Item Two"
+      role="presentation"><a class="slds-tabs--scoped__link" href="javascript:void(0);" role="tab" tabindex="-1" aria-selected="false" aria-controls="tab-scoped-2" id="tab-scoped-2__item" onclick="selectTab(this);">Item Two</a></li>
+    <li class="slds-tabs--scoped__item slds-text-title--caps" title="Item Three"
+      role="presentation"><a class="slds-tabs--scoped__link" href="javascript:void(0);" role="tab" tabindex="-1" aria-selected="false" aria-controls="tab-scoped-3" id="tab-scoped-3__item" onclick="selectTab(this);">Item Three</a></li>
+  </ul>
+  <div id="tab-scoped-1" class="slds-tabs--scoped__content slds-show" role="tabpanel" aria-labelledby="tab-scoped-1__item" >Item One Content</div>
+  <div id="tab-scoped-2" class="slds-tabs--scoped__content slds-hide" role="tabpanel" aria-labelledby="tab-scoped-2__item" >Item Two Content</div>
+  <div id="tab-scoped-3" class="slds-tabs--scoped__content slds-hide" role="tabpanel" aria-labelledby="tab-scoped-3__item" >Item Three Content</div>
+</div>
+    <!-- / PAGE HEADER -->
+
+    <!-- PRIMARY CONTENT WRAPPER -->
+    <div class="myapp"></div>
+  <!-- CASE DETAILS -->
+  
+
+    <!-- / PRIMARY CONTENT WRAPPER -->
+
+    <!-- FOOTER -->
+
+    <!-- / FOOTER -->
+  <!-- / REQUIRED SLDS WRAPPER -->
+
+  <!-- JAVASCRIPT -->
+  <script>
+function selectTab(elmnt) {
+    // slds-active
+    $(elmnt).parent("li").siblings(".slds-active").removeClass("slds-active");
+    $(elmnt).parent("li").addClass("slds-active");
+
+    // tabindex
+    $(elmnt).parent("li").siblings().children("a").attr("tabindex", -1);
+    $(elmnt).attr("tabindex", 0);
+
+    // aria-selected
+    $(elmnt).parent("li").siblings().children("a").attr("aria-selected", false);
+    $(elmnt).attr("aria-selected", true);
+
+    // hiding previouly selected tab (slds-show/slds-hide)
+    $(elmnt).closest(".slds-tabs--default").children("div[role='tabpanel'].slds-show").addClass("slds-hide");
+    $(elmnt).closest(".slds-tabs--default").children("div[role='tabpanel'].slds-show").removeClass("slds-show");
+    // displaying newly selected tab (slds-show/slds-hide)
+    $(elmnt).closest(".slds-tabs--default").children("div[aria-labelledby='"+elmnt.id+"']").addClass("slds-show");
+    $(elmnt).closest(".slds-tabs--default").children("div[aria-labelledby='"+elmnt.id+"']").removeClass("slds-hide");
+}
+</script>
+  <!-- / JAVASCRIPT -->
+  </div>
+</body>
+</html>
+</apex:page>

@@ -1,0 +1,18 @@
+<apex:page standardController="Account" recordSetVar="accounts">
+<apex:form >
+<apex:pageBlock title="My Accounts List">
+<apex:inputField value="{!Account.Rating}"/>
+<apex:commandButton action="{!save}" value="Update Rating"/>
+<apex:pageBlockTable value="{!selected}" var="a" >
+<apex:column headerValue="Account Name" footerValue="End Of table">
+<apex:outputField value="{!a.name}"/>
+</apex:column>
+<apex:column headerValue="Rating">
+<apex:outputField value="{!a.rating}"/>
+</apex:column>
+</apex:pageBlockTable>
+<apex:commandLink action="{!previous}">Previous</apex:commandLink>&nbsp;&nbsp;&nbsp;&nbsp;
+<apex:commandLink action="{!next}">Next</apex:commandLink>
+</apex:pageBlock>
+</apex:form>
+</apex:page>
