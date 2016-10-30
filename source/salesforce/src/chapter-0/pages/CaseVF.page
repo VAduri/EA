@@ -3,7 +3,7 @@
     <apex:sectionheader title="" subtitle="{!Case.CaseNumber}"/>
     <chatter:feedwithfollowers entityId="{!Case.Id}"/>
     <apex:form >
-        <apex:pageblock mode="maindetail" title="SRIYA">
+        <apex:pageblock mode="maindetail" title="SRIYAADURI">
             <apex:pageblockbuttons >
                 <apex:commandbutton value="Edit" action="{!Edit}"/>
                 <apex:commandbutton value="Delete" action="{!Delete}"/>
