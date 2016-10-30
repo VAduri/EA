@@ -68,6 +68,21 @@
 			runAllTests="true"
 			deployRoot="${basedir}/src"/>
 		<sf:deploy
+			username="${sf.username}"
+			password="${sf.password}"
+			serverurl="${sf.server}"
+			checkOnly="true"
+			runAllTests="true"
+			deployRoot="${basedir}/src"/>
+	</target>
+	<target name="deploy.jenkins1" depends="undeploy">
+		<sf:deploy
+			username="${sf.username}"
+			password="${sf.password}"
+			serverurl="${sf.server}"
+			runAllTests="true"
+			deployRoot="${basedir}/src"/>
+		<sf:deploy
 			username="${sf.package.username}"
 			password="${sf.package.password}"
 			serverurl="${sf.server}"
@@ -75,6 +90,7 @@
 			runAllTests="true"
 			deployRoot="${basedir}/src"/>
 	</target>
+
 
 	<!-- Deploy to Packaging org -->
 	<target name="deploy.package">
